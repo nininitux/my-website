@@ -26,3 +26,9 @@ jobs:
 
     - name: Run build
       run: npm run build  # Если у вас есть команда для сборки проекта
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build  # Укажите директорию, куда собирается проект
