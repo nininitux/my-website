@@ -46,70 +46,16 @@ h1 {
     }
 }
 
+/* Стили для выделенного текста */
+.highlight {
+    font-size: 2.5em; /* Увеличиваем размер шрифта */
+    color: #ffcc00; /* Цвет текста */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Добавляем тень для текста */
+    margin-top: 20px; /* Отступ сверху */
+    text-align: center; /* Центрируем текст */
+}
+
 /* Стили для абзацев */
 p {
     font-size: 1.2em;
-    line-height: 1.5;
-    margin: 10px 0;
-    text-align: center;
-    max-width: 600px;
-    opacity: 0; /* Скрываем текст для анимации */
-    transform: translateY(20px); /* Сдвиг вниз */
-    animation: fadeInUp 0.5s forwards; /* Анимация для абзацев */
-    animation-delay: 0.5s; /* Задержка перед началом анимации */
-}
-
-/* Анимация для абзацев */
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0); /* Возвращаем на место */
-    }
-}
-
-/* Стили для ссылок */
-a {
-    color: #ffcc00; /* Цвет текста ссылки */
-    text-decoration: none; /* Убираем подчеркивание */
-    background-color: #ff0055; /* Цвет фона кнопки */
-    padding: 10px 20px; /* Отступы внутри кнопки */
-    border-radius: 5px; /* Скругленные углы */
-    transition: background-color 0.3s; /* Плавный переход цвета фона */
-    opacity: 0; /* Скрываем кнопку для анимации */
-    transform: translateY(20px); /* Сдвиг вниз */
-    animation: fadeInUp 10s forwards; /* Анимация для кнопки */
-    animation-delay: 5s; /* Задержка перед началом анимации */
-}
-
-a:hover {
-    background-color: #ff0088; /* Цвет фона при наведении */
-}
-
-/* Стили для кнопки */
-.button {
-    display: inline-block; /* Включаем блоковое отображение */
-    margin-top: 20px; /* Отступ сверху */
-    border: none; /* Убираем границу */
-    cursor: pointer; /* Изменяем курсор */
-}
-
-/* Стили для изображения */
-.image {
-    max-width: 400px; /* Ограничиваем ширину изображения */
-    width: 100%; /* Ширина 100% для адаптивности */
-    height: auto; /* Автоматическая высота для сохранения пропорций */
-    margin: 20px 0; /* Отступ сверху и снизу */
-    display: block; /* Отображение блока */
-    opacity: 0; /* Скрываем изображение для анимации */
-    transform: translateY(20px); /* Сдвиг вниз */
-    animation: fadeIn 0.5s forwards; /* Анимация для изображения */
-    animation-delay: 5s; /* Задержка перед началом анимации */
-}
-
-/* Анимация для изображения */
-@keyframes fadeIn {
-    to {
-        opacity: 1; /* Появление изображения */
-        transform: translateY(0); /* Возвращаем на место */
-    }
-}
+    line-h
