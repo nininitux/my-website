@@ -26,11 +26,14 @@ body {
 
 /* Стили для заголовка */
 h1 {
-    font-size: 3em;
+    font-size: 4em; /* Увеличиваем размер шрифта */
     text-align: center;
     margin: 0;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-    animation: slideIn 0.5s forwards; /* Анимация для заголовка */
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.7); /* Увеличиваем тень */
+    background: linear-gradient(to right, #ffcc00, #ff1493); /* Градиентный цвет */
+    -webkit-background-clip: text; /* Обрезаем фон по тексту (для хрома и сафари) */
+    -webkit-text-fill-color: transparent; /* Делаем текст прозрачным */
+    animation: slideIn 1s forwards; /* Увеличиваем время анимации */
     opacity: 0; /* Скрываем заголовок для анимации */
     transform: translateY(-50px); /* Сдвиг вверх */
 }
