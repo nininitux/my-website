@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master  # Указываем ветку, на которую будут срабатывать действия
+  pull_request:
+    branches:
+      - master  # Указываем ветку, на которую будут срабатывать действия
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'  # Укажите версию Node.js, если она необходима для вашего проекта
+
+    - name: Install dependencies
+      run: npm install  # Или другой менеджер пакетов, если вы используете что-то другое
+
+    - name: Run build
+      run: npm run build  # Если у вас есть команда для сборки проекта
