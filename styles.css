@@ -1,32 +1,67 @@
 /* Основные стили для тела страницы */
 body {
-    background: linear-gradient(to right, #00c6ff, #0072ff); /* Градиентный фон */
-    font-family: 'Arial', sans-serif; /* Шрифт */
-    margin: 0; /* Убираем отступы */
-    padding: 0; /* Убираем отступы */
-    color: #ffffff; /* Цвет текста */
-    display: flex; /* Используем flexbox для центрирования */
-    flex-direction: column; /* Вертикальная компоновка */
-    align-items: center; /* Центрируем по горизонтали */
-    justify-content: center; /* Центрируем по вертикали */
-    height: 100vh; /* Высота страницы на весь экран */
+    background: linear-gradient(to right, #ff7f50, #ff1493); /* Градиент от кораллового до розового */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden; /* Убираем прокрутку */
+    animation: fadeIn 1s; /* Анимация появления страницы */
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Стили для заголовка */
 h1 {
-    font-size: 3em; /* Размер шрифта заголовка */
-    text-align: center; /* Центрирование текста */
-    margin: 0; /* Убираем отступы */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Тень текста */
+    font-size: 3em;
+    text-align: center;
+    margin: 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    animation: slideIn 0.5s forwards; /* Анимация для заголовка */
+    opacity: 0; /* Скрываем заголовок для анимации */
+    transform: translateY(-50px); /* Сдвиг вверх */
+}
+
+/* Анимация заголовка */
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Возвращаем на место */
+    }
 }
 
 /* Стили для абзацев */
 p {
-    font-size: 1.2em; /* Размер шрифта абзаца */
-    line-height: 1.5; /* Высота строки */
-    margin: 10px 0; /* Отступы сверху и снизу */
-    text-align: center; /* Центрирование текста */
-    max-width: 600px; /* Максимальная ширина абзаца */
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin: 10px 0;
+    text-align: center;
+    max-width: 600px;
+    opacity: 0; /* Скрываем текст для анимации */
+    transform: translateY(20px); /* Сдвиг вниз */
+    animation: fadeInUp 0.5s forwards; /* Анимация для абзацев */
+    animation-delay: 0.5s; /* Задержка перед началом анимации */
+}
+
+/* Анимация для абзацев */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Возвращаем на место */
+    }
 }
 
 /* Стили для ссылок */
@@ -37,6 +72,10 @@ a {
     padding: 10px 20px; /* Отступы внутри кнопки */
     border-radius: 5px; /* Скругленные углы */
     transition: background-color 0.3s; /* Плавный переход цвета фона */
+    opacity: 0; /* Скрываем кнопку для анимации */
+    transform: translateY(20px); /* Сдвиг вниз */
+    animation: fadeInUp 0.5s forwards; /* Анимация для кнопки */
+    animation-delay: 1s; /* Задержка перед началом анимации */
 }
 
 a:hover {
